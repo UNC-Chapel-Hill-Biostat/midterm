@@ -416,7 +416,7 @@ library(splines)</code></pre>
 <ul>
 <li>For the data from years 2000, 2005, and 2010, train a separate linear regression model to predict life expectancy solely based on <code>Country</code>. Then to test, predict the 2015 life expectancy for the countries in the data. Do this training and testing <strong>on the entire dataset</strong>. Print out the MSE, MAE, and <span class="math inline">\(R^2\)</span> on the testing set for each of the three models.</li>
 <li>Are our training and testing sets independent in these cases? Is there evidence of significant correlation between the life expectancies in 2000, 2005, and 2010 with life expectancy in 2015. Print these correlations (3 of them) in a formatted table include the correlation estimates, p-values, and confidence intervals.</li>
-<li>Is there a training and testing set system that we could use to ensure all of the countries are used in either training and testing (but not both) while still using the years 2000, 2005, and 2010 to train and then 2015 to test? Use a 60:40 split structure to describe such a system.</li>
+<li>Is there a training and testing set system that we could use to ensure all of the countries are used in either training and testing (but not both) while still using the years 2000, 2005, and 2010 to train and then 2015 to test? Use a 60:40 split structure to describe such a system. Then implement this in R and report the MSE and <span class="math inline">\(R^2\)</span> in the test set.</li>
 </ul>
 </div>
 <div id="c" class="section level1">
@@ -503,7 +503,7 @@ library(splines)</code></pre>
 </div>
 <div id="c-2" class="section level1">
 <h1>C</h1>
-<p>Finally, we will train and test a logistic regression algorithm allowing for nonlinearity using generalized additive models (GAM). Use the <code>gam</code> package to fit these models (and make sure <code>y</code> is a factor variable!), You will consider 2 models. Both will have the following categorical predictors: <code>job</code>, <code>marital</code>, <code>education</code>, <code>default</code>, <code>housing</code>, <code>loan</code> and <code>y</code> as the outcome. The models are differentiated by how the following predictors are used: <code>age</code>, <code>emp.var.rate</code>, <code>cons.price.idx</code>, and <code>cons.conf.idx</code>. The other variables in the data are omitted from all prediction models.</p>
+<p>Finally, we will train and test a logistic regression algorithm allowing for nonlinearity using generalized additive models (GAM). Use the <code>gam</code> package to fit these models (and make sure <code>y</code> is a factor variable!), You will consider 2 models. Both will have the following categorical predictors: <code>job</code>, <code>marital</code>, <code>education</code>, <code>default</code>, <code>housing</code>, <code>loan</code> and <code>y</code> as the outcome. The models are differentiated by how the following predictors are used: <code>age</code>, <code>emp.var.rate</code>, <code>cons.price.idx</code>, and <code>cons.conf.idx</code>. The other variables in the data are omitted from all models.</p>
 <ol style="list-style-type: decimal">
 <li><code>age</code>, <code>emp.var.rate</code>, <code>cons.price.idx</code>, and <code>cons.conf.idx</code> as linear</li>
 <li><code>age</code>, <code>emp.var.rate</code>, <code>cons.price.idx</code>, and <code>cons.conf.idx</code> as natural cubic splines. Choose the knots using <code>df=4</code>.</li>
