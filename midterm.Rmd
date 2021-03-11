@@ -37,7 +37,7 @@ You are allowed to use any textual resources from the course (lecture slides, le
 
 # Introduction
 
-In this exam, you will analyze three datasets: one with a continuous outcome to predict, one with a categorical outcome, and one looking at nonlinear relationships.
+In this exam, you will analyze three datasets: one with a continuous outcome to predict, one with a categorical outcome, and one looking at nonlinear relationships.  For all datastes, if there are any observations with missing data, please remove these observations for all analyses.
 
 # 1
 
