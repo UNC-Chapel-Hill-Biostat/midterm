@@ -172,7 +172,7 @@ Now, create a panel of scatterplots for these variables, colored by `y` using GG
 Finally, we will train and test a logistic regression algorithm allowing for nonlinearity using generalized additive models (GAM).  Use the `gam` package to fit these models (and make sure `y` is a factor variable!),  You will consider 2 models.  Both will have the following categorical predictors: `job`, `marital`, `education`, `default`, `housing`, `loan` and `y` as the outcome.  The models are differentiated by how the following predictors are used: `age`, `emp.var.rate`, `cons.price.idx`, and `cons.conf.idx`.  The other variables in the data are omitted from all models.  **NOTE: Any variables with the same values for all observations should be omitted from all models as well.**
 
 1. `age`, `emp.var.rate`, `cons.price.idx`, and `cons.conf.idx` as linear
-2. `age`, `emp.var.rate`, `cons.price.idx`, and `cons.conf.idx` as natural cubic splines.  Choose the knots using `df=4`.
+2. `age`, `cons.price.idx`, and `cons.conf.idx` as natural cubic splines (**leave `emp.var.rate` as linear**).  Choose the knots using `df=4`.
 
 Use 5-fold CV to train and test your algorithms.  Report either 1) the CV prediction accuracy and CV standard error (SE) of this accuracy **or** 2) the CV prediction error and CV standard error (SE) of this error for each of these two models in a labeled `flextable`, based on a 0.5 threshold.  Did the addition of the nonlinear spline terms improve the model fit?  Also, **what quantiles of the predictors were the knots place?**  (Hint: using `ns(bank_data$age, df=4)` will tell you)
 
